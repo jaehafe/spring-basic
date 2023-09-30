@@ -21,10 +21,10 @@ public class YoilTellerMVC {
                 if(!isValid(year, month, day))
                         return "yoilError";  // 유효하지 않으면, /WEB-INF/views/yoilError.jsp로 이동
 
-                // 2. 처리
+                // 2. 요일 계산
                 char yoil = getYoil(year, month, day);
 
-                // 3. Model 에 작업 결과 저장
+                // 3. 계산한 결과를 Model 에 작업 결과 저장
                 model.addAttribute("year", year);
                 model.addAttribute("month", month);
                 model.addAttribute("day", day);
